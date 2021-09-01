@@ -6,7 +6,9 @@ export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-CN',
   title: 'FastTunnel',
   description: '开源跨平台内网穿透',
-
+  dest: "dist",
+  temp: ".temp",
+  cache: ".cache",
   themeConfig: {
     logo: 'https://raw.githubusercontent.com/FastTunnel/FastTunnel/v2/images/logo.png',
     locales: {
