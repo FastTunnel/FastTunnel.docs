@@ -1,0 +1,27 @@
+{
+  "name": "fasttunnl.doc",
+  "version": "1.0.0",
+  "description": "fasttunnel 使用文档",
+  "directories": {
+    "doc": "docs"
+  },
+  "dependencies": {
+    "vuepress": "^2.0.0-beta.25"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "docs:build": "vuepress build docs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/FastTunnel/FastTunnel.docs.git"
+  },
+  "author": "gui.h",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/FastTunnel/FastTunnel.docs/issues"
+  },
+  "homepage": "https://github.com/FastTunnel/FastTunnel.docs#readme"
+}
