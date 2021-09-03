@@ -11,6 +11,6 @@ export const zh: NavbarConfig = [
     },
     {
         text: 'Github',
-        link: 'https://github.com/FastTunnel/FastTunnel.docs',
+        link: 'https://github.com/FastTunnel/FastTunnel',
     },
 ]
