@@ -12,7 +12,7 @@ export default defineUserConfig<DefaultThemeOptions>({
   temp: ".temp",
   cache: ".cache",
   themeConfig: {
-    logo: 'https://raw.githubusercontent.com/FastTunnel/FastTunnel/v2/images/logo.png',
+    // logo: 'https://raw.githubusercontent.com/FastTunnel/FastTunnel/v2/images/logo.png',
     locales: {
       /**
        * English locale config
