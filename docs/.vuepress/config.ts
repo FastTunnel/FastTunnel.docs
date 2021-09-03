@@ -1,6 +1,8 @@
 import { defineUserConfig } from 'vuepress'
 import type { DefaultThemeOptions } from 'vuepress'
 import { navbar, sidebar } from './configs'
+import { path } from '@vuepress/utils'
+const isProd = process.env.NODE_ENV === 'production'
 
 export default defineUserConfig<DefaultThemeOptions>({
   lang: 'zh-CN',
@@ -56,5 +58,32 @@ export default defineUserConfig<DefaultThemeOptions>({
       level: [2, 3]
     }
   },
-  open: false
+  open: false,
+  plugins: [
+    ['@vuepress/plugin-debug'],
+    [
+      '@vuepress/plugin-docsearch',
+      {
+        // apiKey: '',
+        // indexName: '',
+        searchParameters: {
+          facetFilters: ['tags:v2'],
+        },
+        locales: {
+          '/': {
+            placeholder: '搜索文档',
+          },
+        },
+      },
+    ],
+    // only enable shiki plugin in production mode
+    [
+      '@vuepress/plugin-shiki',
+      isProd
+        ? {
+          theme: 'dark-plus',
+        }
+        : false,
+    ],
+  ],
 })
