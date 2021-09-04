@@ -12,6 +12,8 @@ export default defineUserConfig<DefaultThemeOptions>({
   temp: ".temp",
   cache: ".cache",
   themeConfig: {
+    repo: 'FastTunnel/FastTunnel.docs',
+    docsDir: 'docs',
     // logo: 'https://raw.githubusercontent.com/FastTunnel/FastTunnel/v2/images/logo.png',
     locales: {
       /**
