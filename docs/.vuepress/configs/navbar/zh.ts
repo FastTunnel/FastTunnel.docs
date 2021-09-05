@@ -10,7 +10,7 @@ export const zh: NavbarConfig = [
         link: 'https://suidao.io',
     },
     {
-        text: 'Github',
+        text: 'FastTunnel',
         link: 'https://github.com/FastTunnel/FastTunnel',
     },
 ]
