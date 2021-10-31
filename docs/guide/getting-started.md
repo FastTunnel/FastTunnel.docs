@@ -14,20 +14,24 @@ docker run --detach \
   --publish 1270:1270 --publish 1271:1271 \
   --name FastTunnel \
   --restart always \
+
   --volume /var/FastTunnel/config:/app/config \
   --volume /var/FastTunnel/Logs:/app/Logs \
   springhgui/fasttunnel:latest
+```
+如果你不仅仅使用Http代理，可别忘记将docker的端口进行映射,例如在docker运行时增加类似下面的参数
+```
+  -p 1270-2270:1270-2270
 ```
 
 ## 如何在 Linux/Mac系统运行？
 #### Windows
 直接双击 `FastTunnel.Client.exe` 即可运行
-#### Linux
-`chmod +x FastTunnel.Client`  
-`./FastTunnel.Client`
-#### Mac
-直接运行 `FastTunnel.Client`
-
+#### Linux Mac
+```shell
+chmod +x FastTunnel.Client
+./FastTunnel.Client
+```
 ## 相关高质量博客
 
 [原理和教程](./blogs.md) 
@@ -65,13 +69,18 @@ http {
 
 客户端配置如下，内网有两台主机，ip如下:
 appsettings.json
-```
- "ClientSettings": {
-    "Common": {
-      "ServerAddr": "xxx.xxx.xxx.xxx",
-      "ServerPort": 1271
+```json
+"ClientSettings": {
+    "Server": {
+      // [必选] 与服务端通讯协议（来自服务端配置文件的urls参数）
+      // 可选参数：ws(http)或wss(https)
+      "Protocol": "ws",
+      // [必选] 服务端ip/域名（来自服务端配置文件的urls参数）
+      "ServerAddr": "test.cc",
+      // [必选] 服务端监听的通信端口（来自服务端配置文件的urls参数）
+      "ServerPort": 1270
     },
-    "SSH": [
+    "Forwards": [
       {
         "LocalIp": "192.168.0.100", // linux主机
         "LocalPort": 22,            // ssh远程默认端口号
