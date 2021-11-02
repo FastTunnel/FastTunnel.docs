@@ -14,7 +14,6 @@ docker run --detach \
   --publish 1270:1270 --publish 1271:1271 \
   --name FastTunnel \
   --restart always \
-
   --volume /var/FastTunnel/config:/app/config \
   --volume /var/FastTunnel/Logs:/app/Logs \
   springhgui/fasttunnel:latest
