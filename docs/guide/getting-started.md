@@ -8,9 +8,7 @@
 
 ## 使用Docker安装
 配置文件和日志文件通过volume挂载，如果之前运行过本镜像，docker可能不会更新至最新的镜像，请手动删除已存在的镜像，然后执行以下命令
-::: warning
-dockerhub的镜像自动创建服务已经停止，版本较旧，有需要先自己用程序根目录的dokcerfile自己打包镜像
-:::
+
 ```
 docker run --detach \
   --publish 1270:1270 --publish 1271:1271 \
