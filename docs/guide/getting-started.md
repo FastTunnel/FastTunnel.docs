@@ -1,10 +1,15 @@
 # 快速上手
 
+### 欢迎在《2021年度OSC中国开源项目评选》为FastTunnel投上一票
+<a href = "https://www.oschina.net/project/top_cn_2021/?id=344">
+  <img src = "https://gitee.com/Hgui/FastTunnel/raw/v2/images/0211207100705.jpg"/>
+</a>
+
 ## 快速搭建服务
 1. 在 [releases](https://github.com/SpringHgui/FastTunnel/releases) 页面下载对应的程序
 2. 根据自己的需求修改客户端以及服务端配置文件`appsettings.json`
-3. 服务端运行FastTunnel.Server
-4. 客户端运行FastTunnel.Cient
+3. 服务端运行`FastTunnel.Server`
+4. 客户端运行`FastTunnel.Cient`
 
 ## 使用Docker安装
 配置文件和日志文件通过volume挂载，如果之前运行过本镜像，docker可能不会更新至最新的镜像，请手动删除已存在的镜像，然后执行以下命令
@@ -18,6 +23,7 @@ docker run --detach \
   --volume /var/FastTunnel/Logs:/app/Logs \
   springhgui/fasttunnel:latest
 ```
+
 如果你不仅仅使用Http代理，可别忘记将docker的端口进行映射,例如在docker运行时增加类似下面的参数
 ```
   -p 1270-2270:1270-2270
@@ -25,8 +31,14 @@ docker run --detach \
 
 ## 如何在 Linux/Mac系统运行？
 #### Windows
-直接双击 `FastTunnel.Client.exe` 即可运行
+直接双击 `FastTunnel.Server.exe` 或 `FastTunnel.Client.exe` 即可运行
 #### Linux Mac
+服务端：
+```shell
+chmod +x FastTunnel.Server
+./FastTunnel.Server
+```
+客户端：
 ```shell
 chmod +x FastTunnel.Client
 ./FastTunnel.Client
@@ -34,7 +46,6 @@ chmod +x FastTunnel.Client
 ## 相关高质量博客
 
 [原理和教程](./blogs.md) 
-
 
 ## 配置示例
 ### 1. 用自定义域名访问内网web服务
@@ -107,6 +118,9 @@ ssh -oPort=12701 root@x.x.x.x
 
 #### mstsc远程桌面Windows主机(ip:192.168.0.101)
 #### 被控制端设置
+::: warning
+Windows家庭版不支持被控制，可能不存在下图所示的选项
+:::
 - 打开cmd输入指令 `sysdm.cpl` 在弹出的对话框中选中允许远程连接此计算机  
 ![img1](/images/setallow.png)
 #### 控制端设置

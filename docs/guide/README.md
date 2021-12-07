@@ -16,11 +16,6 @@ description: FastTunnel使用手册
 - FastTunnel是一款高性能跨平台内网穿透工具，使用它可以实现将内网服务暴露到公网供自己或任何人访问。
 - 与其他穿透工具不同的是，FastTunnel项目致力于打造一个易于扩展、易于维护的内网穿透框架。
 - 你可以通过引用`FastTunnel.Core`的nuget包构建出自己的穿透应用，并针自己所需的业务扩展功能。
-
-## 欢迎在《2021年度OSC中国开源项目评选》为FastTunnel投上一票
-<a href = "https://www.oschina.net/project/top_cn_2021/?id=344">
-  <img src = "./images/0211207100705.jpg"/>
-</a>
  
 ## GVP最有价值开源项目
 ![img1](/images/gvp.png)
