@@ -1,10 +1,5 @@
 # 快速上手
-
-### 欢迎在《2021年度OSC中国开源项目评选》为FastTunnel投上一票
-<a href = "https://www.oschina.net/project/top_cn_2021/?id=344">
-  <img src = "https://gitee.com/Hgui/FastTunnel/raw/v2/images/0211207100705.jpg"/>
-</a>
-
+ 
 ## 快速搭建服务
 1. 在 [releases](https://github.com/SpringHgui/FastTunnel/releases) 页面下载对应的程序
 2. 根据自己的需求修改客户端以及服务端配置文件`appsettings.json`
